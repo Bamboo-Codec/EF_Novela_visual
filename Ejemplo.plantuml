@@ -1,0 +1,55 @@
+@startuml
+class Capitulo1
+class Escena1
+class Escena2
+class Escena3
+class Dialogo1{
+    String : texto1
+    Img : Img
+    Vector2 : center
+    Img : Background
+    bool : option :  0
+}
+class Dialogo2{
+    String : texto2
+    Img : Img
+    Vector2 : center
+    Img : Background
+    bool : option :  0
+}
+class Dialogo3{
+    String : texto3
+    Img : Img
+    Vector2 : center
+    Img : Background
+    bool : option :  0
+}
+class Dialogo4{
+    String : texto4
+    Img : Img
+    Vector2 : center
+    Img : Background
+    bool : option : 1
+    Sting : Ans
+    Pregunta_multeple_opcion()
+
+
+}
+
+Capitulo1 *-- Escena1
+Escena1 *-- Dialogo1
+Dialogo1 -> Dialogo2
+Dialogo2 -> Dialogo3
+Dialogo3 -> Dialogo4
+Dialogo4 -> Escena2 : If Ans 1
+Dialogo4 -> Escena3 : If Ans 2
+Escena2 *-- Dialogo1
+Dialogo1 -> Dialogo2
+Dialogo2 -> Dialogo3
+Dialogo3 -> Dialogo4
+Escena3 *-- Dialogo1
+Dialogo1 -> Dialogo2
+Dialogo2 -> Dialogo3
+Dialogo3 -> Dialogo4
+
+@enduml

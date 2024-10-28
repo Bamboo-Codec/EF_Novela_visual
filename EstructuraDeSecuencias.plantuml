@@ -1,0 +1,18 @@
+@startuml EstructuraDeSecuencias
+
+class Capitulo
+class Escena
+class Dialogo{
+    String : txt
+    Img : Img
+    Vector2 : PosImg
+    Img : Background
+    Bool : OPTION
+    String : Ans
+
+}
+
+Capitulo *-- Escena
+Escena *--  Dialogo
+
+@enduml
